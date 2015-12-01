@@ -1,0 +1,132 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    mavenLocal()
+    maven {
+        name 'maven.aviary.com'
+        url uri("http://maven.aviary.com/repo/release")
+    }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.starclub.syndicator"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    productFlavors {
+        Syndicator {
+            applicationId "com.starclub.syndicator.beta"
+            resValue "string", "app_name", "Syndicator"
+        }
+
+        GEEKAPI {
+            applicationId "com.starclub.syndicator.geekapi"
+            resValue "string", "app_name", "GEEK API"
+        }
+
+        BETAAPI {
+            applicationId "com.starclub.syndicator.betaapi"
+            resValue "string", "app_name", "BETA API"
+        }
+
+        DemoSyndicator {
+            applicationId "com.starclub.syndicator.beta.demo"
+            resValue "string", "app_name", "DEMO Syndicator"
+        }
+
+        DemoGEEKAPI {
+            applicationId "com.starclub.syndicator.geekapi.demo"
+            resValue "string", "app_name", "DEMO GEEK API"
+        }
+
+        DemoBETAAPI {
+            applicationId "com.starclub.syndicator.betaapidemo"
+            resValue "string", "app_name", "DEMO BETA API"
+        }
+
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':ViewPagerIndicator')
+    compile project(':PullToRefresh')
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.turbomanage.basic-http-client:http-client-android:0.89'
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+    compile 'com.google.android.gms:play-services:8.1.0'
+    compile 'com.google.android.gms:play-services-ads:8.1.0'
+    compile 'com.google.android.gms:play-services-identity:8.1.0'
+    compile 'com.google.android.gms:play-services-gcm:8.1.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.aviary.android.feather.sdk:aviary-sdk:3.6.3'
+    compile 'com.google.android.gms:play-services-maps:8.1.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile('org.apache.httpcomponents:httpmime:4.+') {
+        exclude module: "httpclient"
+    }
+    compile('org.apache.httpcomponents:httpcore:4.+') {
+        exclude module: "httpclient"
+    }
+    compile 'com.android.support:support-v13:23.1.0'
+
+    compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+    compile('com.twitter.sdk.android:twitter:1.10.0@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.3@aar') {
+        transitive = true;
+    }
+
+}

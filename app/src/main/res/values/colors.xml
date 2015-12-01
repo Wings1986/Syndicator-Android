@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="AppColor">#1bbc9c</color>
+
+    <color name="BackgroundColor">#404E58</color>
+
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="GrayColor">#888888</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="COLOR_GOLD">#FFB300</color>
+    <color name="COLOR_PURPLE">#9701A4</color>
+    <color name="COLOR_GRAY_LINE">#444444</color>
+    <color name="COLOR_TAN">#CAA163</color>
+    <color name="COLOR_TEAL">#5F9CA5</color>
+    <color name="COLOR_PINK">#DB736E</color>
+
+    <color name="COLOR_GRAY">#616161</color>
+
+    <color name="CameraButtonSelectColor">#FFB300</color>
+    <color name="CameraButtonNormalColor">#FFFFFF</color>
+
+</resources>

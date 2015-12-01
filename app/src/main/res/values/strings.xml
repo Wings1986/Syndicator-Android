@@ -1,0 +1,70 @@
+<resources>
+
+    <!--<string name="app_name">Syndicator</string>-->
+
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyBs-xu_sO6VxOovZZGxsyncFxJvjEgbocA</string>
+
+    <!--<string name="facebook_app_id">403324309876017</string>-->
+    <string name="facebook_app_id">172650679752076</string>
+
+    <string name="TWITTER_KEY">t2WOYIvbqVZRh5OqwmjWiACca</string>
+    <string name="TWITTER_SECRET">sTPuBEBjdxbIdhH15J438MKJUsm25LvnU08RDtILlO7UB9oN8T</string>
+
+    <string name="AVIERY_KEY">269ed7dcaebea885</string>
+    <string name="AVIARY_SECRET_KEY">2d5f9334e87e1e12</string>
+
+
+    <string name="login_title">Your welcome email has\nyour login information</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="button_login">LOG IN</string>
+    <string name="close">Close</string>
+    <string name="videos">Videos</string>
+    <string name="media">Media</string>
+    <string name="viral_videos">VIRAL VIDEOS</string>
+    <string name="swipe_for_options">SWIPE FOR\nOPTIONS</string>
+    <string name="performance_overview">PERFORMANCE OVERVIEW</string>
+    <string name="cancel">Cancel</string>
+    <string name="posts">POSTS</string>
+    <string name="share">SHARE</string>
+    <string name="view">VIEW</string>
+    <string name="play">PLAY</string>
+    <string name="embed">EMBED</string>
+    <string name="edit">EDIT</string>
+    <string name="delete">DELETE</string>
+    <string name="revenue">Revenue</string>
+    <string name="views">Views</string>
+    <string name="likes">Likes</string>
+    <string name="shares">Shares</string>
+    <string name="favorites">Favorites</string>
+    <string name="retweets">Re-tweets</string>
+    <string name="comments">Comments</string>
+    <string name="right_now">RIGHT NOW</string>
+    <string name="logout">LOG OUT</string>
+    <string name="pairing_status">PAIRING STATUS:</string>
+    <string name="cumulative_year_projection">Cumulative Year Projection:</string>
+    <string name="suggested">- SUGGESTED</string>
+    <string name="current">--CURRENT</string>
+    <string name="videos_per_week">Videos Per Week</string>
+    <string name="not_connected">NOT\nCONNECTED</string>
+    <string name="connected">CONNECTED</string>
+    <string name="enabled">ENABLED</string>
+    <string name="disabled">DISABLED</string>
+    <string name="done">DONE</string>
+    <string name="skip">SKIP</string>
+    <string name="next">NEXT</string>
+    <string name="send_to">SEND TO:</string>
+    <string name="change_thumb">Change Thumb</string>
+    <string name="caption">Caption</string>
+
+    <string name="write_a_caption">Write a caption...</string>
+    <string name="suggestion_100_characters">Suggestion 100 characters</string>
+    <string name="tap_to_pick_thumbnail">TAP TO PICK THUMBNAIL</string>
+
+    <string name="api_version">Api Version:</string>
+    <string name="social_settings">Social Settings</string>
+
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+</resources>

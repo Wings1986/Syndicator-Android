@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/cell_pairing_round_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:id="@+id/lbTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:padding="2dp"
+                android:text="Add More..."
+                android:textColor="@color/White"
+                android:textSize="16dp"/>
+
+            <CheckBox
+                android:id="@+id/swEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:checked="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="left|bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp">
+
+            <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+                android:id="@+id/lbStatueFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V"
+                android:textColor="@color/White"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:id="@+id/lbStatue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:text="CONNECTED"
+                android:textColor="@color/White"
+                android:textSize="9dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

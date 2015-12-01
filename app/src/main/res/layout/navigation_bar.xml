@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_height">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/nav_back"
+            android:layout_width="@dimen/navigation_height"
+            android:layout_height="@dimen/navigation_height"
+            android:layout_gravity="left|center_vertical"
+            android:padding="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="7"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="20sp"/>
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/nav_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:text="1"
+            android:gravity="center"/>
+
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/nav_action"
+            android:layout_width="@dimen/navigation_height"
+            android:layout_height="@dimen/navigation_height"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/btn_back"
+            android:visibility="visible"
+            android:text="i"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="@color/White"
+            android:textSize="20sp"/>
+
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:id="@+id/nav_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:visibility="gone"
+            android:text="@string/logout"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="#929292"
+            android:textSize="10sp"
+            android:background="@drawable/button_curated_round_bg"/>
+
+    </FrameLayout>
+
+</LinearLayout >

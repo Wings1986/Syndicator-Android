@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#262626">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/nav_back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_margin="10dp"
+            android:text="X"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="22sp"
+            android:background="@drawable/button_x_round_bg"/>
+
+    </FrameLayout >
+
+</RelativeLayout>

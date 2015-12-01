@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#262626">
+
+    <include
+        android:id="@+id/navlayout"
+        layout="@layout/navigation_bar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:id="@+id/titleVideo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/media"
+            android:textColor="#808080"
+            android:gravity="left"
+            android:padding="5dp"
+            android:textSize="17dp"
+            />
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:id="@+id/titleCurated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/viral_videos"
+            android:textColor="#808080"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+
+            android:textSize="17dp"
+            />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"
+        android:divider="@color/White"
+        android:dividerHeight="1px"
+        />
+
+
+</LinearLayout>

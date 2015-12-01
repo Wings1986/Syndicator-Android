@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor">
+
+    <include
+        android:id="@+id/navlayout"
+        layout="@layout/navigation_bar"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.starclub.syndicator.widget.SquareFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/fragment_camera_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+                    android:id="@+id/btnTorch"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="m"
+                    android:textColor="@color/White"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_margin="5dp"/>
+
+                <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+                    android:id="@+id/btnToggle"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="n"
+                    android:textColor="@color/White"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="top|right"
+                    android:layout_margin="5dp"/>
+
+            </FrameLayout>
+            
+        </com.starclub.syndicator.widget.SquareFrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/btnPhotoGallery"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom|left"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:background="@drawable/button_gallery_round_bg"/>
+
+            <LinearLayout
+                android:id="@+id/btnCurated"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_curated_round_bg">
+
+
+                <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+                    android:id="@+id/btnVirals"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/CameraButtonSelectColor"
+                    android:text="\?"
+                    android:textSize="28dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:text="VIRALS"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="9dp"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/arrowImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/triangle_bg"
+                    />
+
+                <Button
+                    android:id="@+id/btnPhoto"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:text="PHOTO"
+                    android:textColor="#FFB300"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="top|left"/>
+
+                <ImageView
+                    android:id="@+id/btnCamera"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_camera_photo_bg"/>
+
+                <Button
+                    android:id="@+id/btnVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:text="VIDEO"
+                    android:textColor="#FFB300"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="top|right"/>
+
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

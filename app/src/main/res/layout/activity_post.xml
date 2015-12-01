@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor">
+
+    <include
+        android:id="@+id/navlayout"
+        layout="@layout/navigation_bar"/>
+
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/image_round_bg">
+            
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+            <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+                android:id="@+id/btnPlayVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:text="Q"
+                android:textColor="@color/White"
+                android:layout_gravity="left|bottom"
+                android:padding="5dp"
+                android:textSize="25dp"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send_to"
+                android:textColor="@color/COLOR_GRAY"
+                android:padding="5dp"
+                android:textSize="13dp"
+                />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/groupSocialButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnFacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnTwitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnThumblr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnInstagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+                    <com.starclub.syndicator.customcontrol.SSPostSocialButton
+                        android:id="@+id/btnPinterest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.starclub.syndicator.customcontrol.CustomFontButton
+        android:id="@+id/btnChangeThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/change_thumb"
+        android:textColor="@color/COLOR_GOLD"
+        android:textSize="10sp"
+        android:background="@drawable/button_change_thumb_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caption"
+                android:textColor="@color/White"
+                android:gravity="left"
+                android:padding="5dp"
+                android:textSize="13dp"
+                />
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:id="@+id/charCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caption"
+                android:textColor="@color/COLOR_GRAY"
+                android:layout_gravity="right|center_vertical"
+                android:padding="5dp"
+                android:textSize="10dp"
+                />
+        </FrameLayout>
+
+
+        <com.starclub.syndicator.customcontrol.CustomFontEdittext
+            android:id="@+id/edit_caption"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textColor="@color/White"
+            android:hint="@string/write_a_caption"
+            android:textColorHint="#616161"
+            android:gravity="left"
+            android:padding="5dp"
+            android:textSize="13dp"
+            android:background="@color/Black"/>
+
+    </LinearLayout>
+
+
+
+    <com.starclub.syndicator.customcontrol.CustomFontButton
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="25dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/share"
+        android:textColor="@color/Black"
+        android:background="@drawable/button_post_bg"/>
+
+
+</LinearLayout>

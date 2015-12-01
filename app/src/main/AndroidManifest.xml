@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.starclub.syndicator" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.starclub.syndicator.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.raw" />
+
+    <application
+        android:name=".UIApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.SSLaunchActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.SSTutorialActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSComposeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSPairingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSCurateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSDashboardActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSVideoPlayer" android:configChanges="orientation|screenSize"/>
+        <activity android:name=".activity.SSPostActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSChangeThumbActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SSWebPairingActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:name=".activity.SSTermsActivity" android:screenOrientation="portrait"/>
+
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <!--
+            Aviery
+        -->
+
+        <meta-data
+            android:name="com.aviary.android.feather.v1.API_KEY"
+            android:value="@string/AVIERY_KEY" />
+
+        <!-- Main Editor Activity -->
+        <activity
+            android:name="com.aviary.android.feather.sdk.FeatherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="unspecified"
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:process=":aviarysdk"
+            android:theme="@style/AviaryTheme.Dark" />
+
+        <!-- CDS Content Service -->
+        <service
+            android:process=":aviarycds"
+            android:name="com.aviary.android.feather.cds.AviaryCdsService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_START"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_USER_ITEMS"/>
+            </intent-filter>
+        </service>
+
+        <!--
+            Cds Content Provider,
+            NOTE that the "authorities" value MUST be formatted in this way:
+            android:authorities="{your.packagename}.AviaryCdsProvider"
+         -->
+        <provider
+            android:name="com.aviary.android.feather.cds.AviaryCdsProvider"
+            android:authorities="${packageName}.AviaryCdsProvider"
+            android:process=":aviarycds"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- CDS Download Receiver -->
+        <receiver
+            android:name="com.aviary.android.feather.cds.AviaryCdsReceiver"
+            android:process=":aviarycds" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8113605c699e25e934a854dd8ad9f5d059ef3227" />
+    </application>
+
+</manifest>

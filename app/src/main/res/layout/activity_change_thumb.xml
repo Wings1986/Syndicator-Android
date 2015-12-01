@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.starclub.syndicator.customcontrol.CustomFontButton
+            android:id="@+id/btnCancel"
+            android:layout_width="75dp"
+            android:layout_height="46dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/Black"
+            android:background="@drawable/button_post_bg"/>
+    </FrameLayout>
+
+    <com.starclub.syndicator.customcontrol.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/tap_to_pick_thumbnail"
+        android:textColor="#808080"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="17dp"
+        />
+
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/rv"/>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

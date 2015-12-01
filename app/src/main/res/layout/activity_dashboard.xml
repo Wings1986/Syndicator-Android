@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BackgroundColor">
+
+    <include
+        android:id="@+id/navlayout"
+        layout="@layout/navigation_bar"/>
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/performance_overview"
+            android:textColor="#808080"
+            android:gravity="left"
+            android:padding="5dp"
+            android:textSize="17dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="$"
+                android:textColor="@color/White"
+                android:gravity="left|top"
+                android:layout_gravity="left|top"
+                android:padding="5dp"
+                android:textSize="17dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.starclub.syndicator.customcontrol.CountingTextView
+                        android:id="@+id/lbEarning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="188.0K"
+                        android:textColor="#79C46D"
+                        android:gravity="center_horizontal"
+                        android:padding="0dp"
+                        android:textSize="30dp"/>
+
+                    <com.starclub.syndicator.customcontrol.CustomFontTextView
+                        android:id="@+id/lbEarningSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="YTD"
+                        android:textColor="#B3B3B3"
+                        android:gravity="center_horizontal"
+                        android:padding="2dp"
+                        android:textSize="11dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.starclub.syndicator.customcontrol.CountingTextView
+                        android:id="@+id/lbImpression"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="188.0K"
+                        android:textColor="#619CA4"
+                        android:gravity="center_horizontal"
+                        android:padding="0dp"
+                        android:textSize="30dp"/>
+
+                    <com.starclub.syndicator.customcontrol.CustomFontTextView
+                        android:id="@+id/lbImpressionSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="YTD"
+                        android:textColor="#B3B3B3"
+                        android:gravity="center_horizontal"
+                        android:padding="2dp"
+                        android:textSize="11dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.starclub.syndicator.customcontrol.CountingTextView
+                        android:id="@+id/lbReach"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="188.0K"
+                        android:textColor="#C9A067"
+                        android:gravity="center_horizontal"
+                        android:padding="0dp"
+                        android:textSize="30dp"/>
+
+                    <com.starclub.syndicator.customcontrol.CustomFontTextView
+                        android:id="@+id/lbReachSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="YTD"
+                        android:textColor="#B3B3B3"
+                        android:gravity="center_horizontal"
+                        android:padding="2dp"
+                        android:textSize="11dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/layoutMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/White">
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment" />
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/btnExpandMap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:text="v"
+            android:textColor="@color/White"
+            android:gravity="center"
+            android:layout_gravity="right|top"
+            android:textSize="16dp"
+            android:background="@drawable/image_round_bg"/>
+
+        <LinearLayout
+            android:id="@+id/layoutMapBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/Black"
+            android:layout_gravity="bottom">
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/right_now"
+                android:textColor="#61CF00"
+                android:gravity="left"
+                android:padding="3dp"
+                android:textSize="14dp"/>
+
+            <com.starclub.syndicator.customcontrol.CustomFontTextView
+                android:id="@+id/lbMapPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/videos"
+                android:textColor="@color/White"
+                android:gravity="left"
+                android:padding="3dp"
+                android:textSize="13dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:id="@+id/titleVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/videos"
+            android:textColor="#808080"
+            android:gravity="left"
+            android:padding="5dp"
+            android:textSize="17dp"
+            />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview"
+            android:divider="#808080"
+            android:dividerHeight="1px"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

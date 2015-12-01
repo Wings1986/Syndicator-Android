@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/image_connect_round_bg"
+        android:gravity="center">
+
+        <com.starclub.syndicator.customcontrol.CustomStarsiteFontTextView
+            android:id="@+id/lbIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:padding="3dp"
+            android:text="d"
+            android:textColor="@color/White"
+            android:textSize="22dp"
+            />
+
+        <com.starclub.syndicator.customcontrol.CustomFontTextView
+            android:id="@+id/lbTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:text="@string/not_connected"
+            android:lines="2"
+            android:textColor="#FF0000"
+            android:textSize="10dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

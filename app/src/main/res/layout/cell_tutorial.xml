@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    >
+
+
+    <ImageView
+        android:id="@+id/tutorial_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:src="@drawable/tutorial_0"/>
+
+    <com.starclub.syndicator.customcontrol.CustomFontTextView
+        android:id="@+id/tutorial_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="title"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="28dp"
+        android:textStyle="bold"/>
+
+    <com.starclub.syndicator.customcontrol.CustomFontTextView
+        android:id="@+id/tutorial_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="title"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="20dp"
+        />
+
+    <com.starclub.syndicator.customcontrol.CustomFontTextView
+        android:id="@+id/tutorial_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Start"
+        android:textColor="@color/White"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+</LinearLayout>
